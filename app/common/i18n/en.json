@@ -1,0 +1,18 @@
+{
+  "app.title": "AngularJS in English",
+  "app.footer": "This is a footer",
+  "contact.id": "Id",
+  "contact.firstName": "First name",
+  "contact.lastName": "Last name",
+  "contact.email": "Email",
+  "contact.cellphone": "Cellphone",
+  "contact.search": "Search",
+  "contact.open.add.window": "Add contact",
+  "contact.validate.add": "Add",
+  "contact.cancel.add": "Cancel",
+
+  "form.required": "Required field",
+  "form.invalid.lenght": "Use between {{min}} and {{max}} characters",
+  "form.invalid.email": "Invalid email",
+  "form.invalid.cellphone": "Invalid cellphone number"
+}

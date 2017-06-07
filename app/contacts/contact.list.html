@@ -1,0 +1,28 @@
+<div>
+  <label>{{'contact.search' | translate}}</label>
+  <input ng-model="search" placeholder="{{'contact.search' | translate}}" />
+  <button class="submit btn btn-primary" ui-sref="root.contacts.add">
+    <span class="glyphicon glyphicon-plus"></span>
+    {{'contact.open.add.window' | translate}}
+  </button>
+</div>
+<table class="table">
+  <tr>
+    <th class="text-center">#</th>
+    <th class="text-center">{{'contact.id' | translate}}</th>
+    <th class="text-center">{{'contact.firstName' | translate}}</th>
+    <th class="text-center">{{'contact.lastName' | translate}}</th>
+    <th class="text-center">{{'contact.email' | translate}}</th>
+    <th class="text-center">{{'contact.cellphone' | translate}}</th>
+    <th class="text-center"></th>
+  </tr>
+  <tr ng-repeat="contact in contacts | filter:search | orderBy:'firstName' track by $index">
+    <td><span class="glyphicon glyphicon-user"></span></td>
+    <td ng-bind='contact.id'></td>
+    <td ng-bind='contact.firstName'></td>
+    <td ng-bind='contact.lastName'></td>
+    <td ng-bind='contact.email'></td>
+    <td ng-bind='contact.cellphone'></td>
+    <td><span class="glyphicon glyphicon-remove" ng-click="deleteContact(contact)"></span></td>
+  </tr>
+</table>

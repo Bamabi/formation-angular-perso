@@ -1,0 +1,17 @@
+// L'injection de dépendances :
+
+Tableau de dépendance :
+  app.controller('Test',['$scope','service',function(a,b){
+
+
+  }]);
+
+$inject :
+  var Test = function(a,b){}
+  Test.$inject = ['$scope','service'];
+  app.controller('Test',Test);
+
+Implicite :
+  app.controller('Test',function($scope,service){
+
+  });

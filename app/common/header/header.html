@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="pull-right">
+    <span ng-class="{'selected': language=='en'}" ng-click="changeLanguage('en')" class="flag-icon flag-icon-gb"></span>
+    <span ng-class="{'selected': language=='fr'}" ng-click="changeLanguage('fr')" class="flag-icon flag-icon-fr"></span>
+    <span ng-class="{'selected': language=='es'}" ng-click="changeLanguage('es')" class="flag-icon flag-icon-es"></span>
+  </div>
+  <h1 class="header" translate="app.title">{{today | date:'yyyy-MM-dd'}}</h1>
+</div>

@@ -1,0 +1,30 @@
+{
+  "name": "javascript",
+  "description": "",
+  "main": "tableauAssociatif.js",
+  "authors": [
+    "alban.leau <alban.leau@modisfrance.fr>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-cookies": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "angular-translate": "^2.11.0",
+    "bootstrap": "^3.3.6",
+    "angular-translate-storage-cookie": "^2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0",
+    "angular-messages": "^1.5.7"
+  }
+}

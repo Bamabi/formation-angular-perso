@@ -1,0 +1,18 @@
+{
+  "app.title": "AngularJS en Français",
+  "app.footer": "Ceci est un pied de page",
+  "contact.id": "Identifiant",
+  "contact.firstName": "Nom",
+  "contact.lastName": "Prénom",
+  "contact.email": "Email",
+  "contact.cellphone": "Téléphone",
+  "contact.search": "Recherche",
+  "contact.open.add.window": "Ajouter un contact",
+  "contact.validate.add": "Ajouter",
+  "contact.cancel.add": "Annuler",
+
+  "form.required": "Ce champ est requis",
+  "form.invalid.lenght": "Saisir entre {{min}} et {{max}} caractères",
+  "form.invalid.email": "Adresse email invalide",
+  "form.invalid.cellphone": "Numéro de téléphone invalide"
+}

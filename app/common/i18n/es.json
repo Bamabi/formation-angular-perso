@@ -1,0 +1,18 @@
+{
+  "app.title": "AngularJS en Español",
+  "app.footer": "Este es un pie de página",
+  "contact.id": "Identificación",
+  "contact.firstName": "Nombre",
+  "contact.lastName": "Apellido",
+  "contact.email": "Email",
+  "contact.cellphone": "Teléfono",
+  "contact.search": "Búsqueda",
+  "contact.open.add.window": "Añadir un contacto",
+  "contact.validate.add": "Añadir",
+  "contact.cancel.add": "Cancelar",
+
+  "form.required": "Este campo es obligatorio",
+  "form.invalid.lenght": "Entre entre {{min}} y {{max}} caracteres",
+  "form.invalid.email": "Email no es válida",
+  "form.invalid.cellphone": "Número de teléfono no es válido"
+}

@@ -1,0 +1,63 @@
+<div class="form-group">
+  <form ng-submit="addContact()" class="form-horizontal"  id="contactForm" name="contactForm" novalidate>
+    <div  class="form-group" ng-class="{ 'has-error' : contactForm.firstName.$invalid && contactForm.firstName.$dirty }">
+
+      <label for="firstName" class="col-sm-2 control-label">{{'contact.firstName' | translate}}</label>
+      <div class="col-sm-10">
+        <input required id="firstName" name="firstName" ng-model="contact.firstName" type="text" class="nom form-control" ng-minlength="3"
+           ng-maxlength="20" >
+      </div>
+
+      <p class="col-sm-12 control-label pull-right" ng-if='contactForm.firstName.$invalid && contactForm.firstName.$dirty' ng-messages="contactForm.firstName.$error" role="alert">
+        <span ng-message="minlength || maxlength">{{'form.invalid.lenght' | translate:{min:2,max:20} }}</span>
+        <span ng-message="required">{{'form.required' | translate}}</span>
+      </p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : contactForm.lastName.$invalid && contactForm.lastName.$dirty }">
+      <label for="lastName" class="col-sm-2 control-label">{{'contact.lastName' | translate}}</label>
+      <div class="col-sm-10">
+        <input name="lastName" id="lastName" ng-model="contact.lastName" type="text" class="prenom form-control" required ng-minlength="3"
+           ng-maxlength="20" >
+      </div>
+
+      <p class="col-sm-12 control-label pull-right" ng-if='contactForm.lastName.$invalid && contactForm.lastName.$dirty' ng-messages="contactForm.lastName.$error" style="color:brown" role="alert">
+        <span ng-message="minlength || maxlength">{{'form.invalid.lenght' | translate:{min:2,max:20} }}</span>
+        <span ng-message="required">{{'form.required' | translate}}</span>
+      </p>
+
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && contactForm.email.$dirty }">
+      <label for="email" class="col-sm-2 control-label">{{'contact.email' | translate}}</label>
+      <div class="col-sm-10">
+        <input name="email" id="email" ng-model="contact.email" type="email" class="email form-control" required >
+      </div>
+
+      <p class="col-sm-12 control-label pull-right" ng-if='contactForm.email.$invalid && contactForm.email.$dirty' ng-messages="contactForm.email.$error" style="color:brown" role="alert">
+        <span ng-message="email">{{'form.invalid.email' | translate}}</span>
+        <span ng-message="required">{{'form.required' | translate}}</span>
+      </p>
+
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : contactForm.cellphone.$invalid && contactForm.cellphone.$dirty }">
+      <label for="cellphone" class="col-sm-2 control-label">{{'contact.cellphone' | translate}}</label>
+      <div class="col-sm-10">
+        <input name="cellphone" id="cellphone" ng-model="contact.cellphone" type="cellphone" class="cellphone form-control" required ng-pattern="/^[0-9]{10,10}$/" >
+      </div>
+
+      <p class="col-sm-12 control-label pull-right" ng-if='contactForm.cellphone.$invalid && contactForm.cellphone.$dirty' ng-messages="contactForm.cellphone.$error" style="color:brown" role="alert">
+        <span ng-message="pattern">{{'form.invalid.cellphone' | translate}}</span>
+        <span ng-message="required">{{'form.required' | translate}}</span>
+      </p>
+
+    </div>
+    <div class="form-group centered">
+      <button type="submit" class="submit btn btn-primary" ng-disabled="contactForm.$invalid">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{'contact.validate.add' | translate}}
+      </button>
+      <button type="button" ng-click="cancelAdd()" class="submit btn btn-warning">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> {{'contact.cancel.add' | translate}}
+      </button>
+    </div>
+  </form>
+</div>
